@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function generateOtp(){ 
+let str="123456789abcdef"
+let otp='#';
+let d=document.createElement("div");
+for(let i=0;i<4;i++){
+      otp+=str[Math.floor(Math.random()*15)]
+}
+d.style.width="50px";
+    d.style.height="50px";
+    d.innerHTML=otp;
+    d.style.backgroundColor=otp;
+    d.style.display="inline-block";
+    d.style.textAlign="center";
+    document.body.appendChild(d);
+}
+generateOtp();
+setInterval(generateOtp,1000)
+    </script>
+</body>
+</html>
